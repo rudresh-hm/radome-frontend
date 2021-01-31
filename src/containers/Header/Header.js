@@ -20,7 +20,7 @@ const Header=(props)=>{
         product:"Bolt",
         country:"India",
         state:"Kerala",
-        city:"Thiruvananthapuram",
+        city:"Kannur",
         store:"14",
         dept:"7",
     });
