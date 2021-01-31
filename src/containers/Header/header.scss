@@ -1,0 +1,102 @@
+@import '../../assets/styles/colors';
+header{
+    padding-bottom: 20rem;
+    background-color: $black-dark;
+    display: flex;
+    .dashboard-header{
+        font-size: 2.5rem;
+        color: $white;
+        font-weight: 400;
+        margin-top: 4rem;
+        margin-left: 2rem;
+    }
+    .filter-grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        align-items: center;
+        width: 90%;
+        margin: 3rem auto;
+    }
+    .all-filter-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .line-graph{
+        width: 90%;
+        margin: 0 auto;
+        padding-bottom: 5rem;
+        margin-top: 2rem;
+        position: relative;
+        #x-axis{
+            position: absolute;
+            color:$white;
+            bottom: 1.5rem;
+            left:50%;
+            font-size: 1.8rem;
+            display: none;
+        }
+        #y-axis{
+            position: absolute;
+            color:$white;
+            top:50%;
+            left:-7rem;
+            transform: rotate(-90deg) translateY(-50%);
+            font-size: 1.8rem;
+            display: none;
+        }
+    }
+    canvas{
+        height: 50rem !important;
+    }
+}
+@media only screen and (min-width: 768px) {
+    header{
+        display: flex;
+        align-items: center;
+        .dashboard-header{
+            text-align: center;
+        }
+        canvas{
+            height: auto;
+        }
+        .line-graph{
+            #x-axis{
+                display: inline-block;
+            }
+            #y-axis{
+                display: inline-block;
+            }
+        }
+    }
+
+}
+@media only screen and (min-width: 1200px) {
+    header{
+        .dashboard-header{
+            margin-top: 3rem;
+            margin-left: 5rem;
+            margin-bottom: 1rem;
+            text-align: left;
+        }
+        .all-filter-container{
+            display: flex;
+            flex-direction: row;
+            flex-flow: wrap;
+            margin-left: 0.8rem;
+        }
+        .filter-grid{
+            width: fit-content;
+            display: flex;
+            margin:0;
+            margin-bottom: 2rem;
+        }
+    }
+}
+@media only screen and (min-width: 1600px) {
+    header{
+        .dashboard-header{
+            margin-left: 4rem;
+        }
+    }
+}

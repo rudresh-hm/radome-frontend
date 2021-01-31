@@ -1,0 +1,41 @@
+@import '../../assets//styles/colors';
+.dashboard{
+    width: 100%;
+    background-color: $secondary;
+    .product-row{
+        margin-bottom: 5rem;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .dashboard{
+        width: 95%;
+        
+        border-radius: 3rem;
+        margin:0 auto;
+    }
+    .product-row{
+        display: flex;
+        flex-direction: column;
+        width: 95%;
+        
+        justify-content: space-between;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .dashboard{
+        width: 78%;
+        border-radius: 3rem;
+        // height: 95vh;
+        margin-top: 2rem;
+    }
+    .product-row{
+        width: 95%;
+        flex-direction: row;
+    }
+}
+@media only screen and (min-width: 1600px) {
+    .product-row{
+        width: 75%;
+        margin: 0;
+    }
+}
